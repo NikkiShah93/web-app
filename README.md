@@ -4,7 +4,7 @@ In this project, we will be using the following tools:
 1. Python
 2. Docker
 3. Docker-compose
-4. Kubernetes
+4. Kubernetes (Minikube)
 5. Helm
 
 ### Steps in in the project will be as follows:
