@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 ## creating an app
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 ## adding the first route
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return render_template("index.html")
 
 ## adding the health end point
 ## to check if the service is up and running
