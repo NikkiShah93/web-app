@@ -1,12 +1,12 @@
 ## selecting a small base image
-FROM python:3.8.19-alpine3.20
+FROM python:3.10.0-alpine3.15
 ## setting the working dir
 WORKDIR /app
 ## and copy the needed content
 COPY requirements.txt .
-COPY src src
 ## installing all the required packages
 RUN pip install -r requirements.txt
+COPY src src
 ## running our docker on port 5000
 EXPOSE 5000
 ## using the health entry point
