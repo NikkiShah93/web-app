@@ -1,0 +1,23 @@
+## docker-compose version
+version: "3.9"
+## services inside the compose
+services:
+  ## name of the sevice
+  web:
+    ## the dir, dockerfile, etc.
+    build: 
+      context: .
+      dockerfile: dockerfile 
+    ## name of the image
+    image: web-app:1.6
+    ## ports for the container
+    ports:
+      - "80:5000"
+    ## enabling the restart in case of failure
+    restart: always
+    ## using a specific network
+    networks:
+      - mynetwork
+## creating the network for container
+networks:
+  mynetwork:
